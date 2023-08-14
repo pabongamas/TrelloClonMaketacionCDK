@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import {DialogModule} from '@angular/cdk/dialog';
+// import {DialogModule} from '@angular/cdk/dialog';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,7 +33,7 @@ import { TodoDialogComponent } from './components/todo-dialog/todo-dialog.compon
     DragDropModule,
     AppRoutingModule,
     FontAwesomeModule,
-    DialogModule,
+    // DialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
