@@ -15,7 +15,7 @@
           (cdkDropListDropped)="drop($event)"
           [cdkDropListData]="todos"
         >
-          <div (click)="openDialog()"
+          <div (click)="openDialog(todo)"
             *ngFor="let todo of todos"
             cdkDrag
             class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
@@ -34,7 +34,7 @@
           (cdkDropListDropped)="drop($event)"
           [cdkDropListData]="doing"
         >
-          <div
+          <div (click)="openDialog(todo)"
             *ngFor="let todo of doing"
             cdkDrag
             class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
@@ -53,7 +53,7 @@
           (cdkDropListDropped)="drop($event)"
           [cdkDropListData]="done"
         >
-          <div
+          <div (click)="openDialog(todo)"
             *ngFor="let todo of done"
             cdkDrag
             class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
