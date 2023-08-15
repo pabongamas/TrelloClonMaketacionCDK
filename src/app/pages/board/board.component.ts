@@ -7,6 +7,8 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+import {Dialog} from '@angular/cdk/dialog';
+import {TodoDialogComponent} from './../../components/todo-dialog/todo-dialog.component';
 
 import { toDo } from '../../models/todo.model';
 @Component({
@@ -58,7 +60,9 @@ export class BoardComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private dialog:Dialog
+  ) { }
 
   ngOnInit(): void {
   }
@@ -76,6 +80,13 @@ export class BoardComponent implements OnInit {
       );
     }
 
+  }
+  openDialog(){
+    this.dialog.open(TodoDialogComponent,{
+      minWidth:'300px',
+      maxWidth:'50%',
+      autoFocus:false
+    });
   }
 
 }
